@@ -6,7 +6,6 @@ use App\Controllers\BaseController;
 
 class AdminController extends BaseController
 {
-
     private $registeremp;
 
     public function __construct()
