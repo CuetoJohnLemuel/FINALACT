@@ -7,11 +7,11 @@ use CodeIgniter\Router\RouteCollection;
  */
 
  //FOR USER
-$routes->get('/myhome', 'UserController::userhome');
-$routes->get('/about', 'UserController::about');
-$routes->get('/joblist', 'UserController::joblist');
-$routes->get('/jobdetails', 'UserController::jobdetails');
-$routes->get('/contact', 'UserController::contact');
+$routes->get('/', 'ApplicantController::userhome');
+$routes->get('/about', 'ApplicantController::about');
+$routes->get('/joblist', 'ApplicantController::joblist');
+$routes->get('/jobdetails', 'ApplicantController::jobdetails');
+$routes->get('/contact', 'ApplicantController::contact');
 
 //FOR EMPLOYER
 $routes->get('/employerhome', 'EmployerController::employerhome');

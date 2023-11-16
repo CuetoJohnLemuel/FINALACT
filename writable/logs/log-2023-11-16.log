@@ -1,0 +1,24 @@
+CRITICAL - 2023-11-16 02:16:03 --> Declaration of App\Controllers\ApplicantController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+in APPPATH\Controllers\ApplicantController.php on line 45.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-16 02:16:06 --> Declaration of App\Controllers\ApplicantController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+in APPPATH\Controllers\ApplicantController.php on line 45.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-16 02:16:07 --> Declaration of App\Controllers\ApplicantController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+in APPPATH\Controllers\ApplicantController.php on line 45.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-16 02:24:46 --> Declaration of App\Controllers\ApplicantController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+in APPPATH\Controllers\ApplicantController.php on line 45.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-16 02:24:49 --> Declaration of App\Controllers\ApplicantController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+in APPPATH\Controllers\ApplicantController.php on line 45.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-16 02:24:52 --> Declaration of App\Controllers\ApplicantController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+in APPPATH\Controllers\ApplicantController.php on line 45.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-16 02:34:42 --> Declaration of App\Controllers\ApplicantController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+in APPPATH\Controllers\ApplicantController.php on line 45.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-11-16 02:47:46 --> Declaration of App\Controllers\ApplicantController::update($id) must be compatible with CodeIgniter\RESTful\ResourceController::update($id = null)
+in APPPATH\Controllers\ApplicantController.php on line 44.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

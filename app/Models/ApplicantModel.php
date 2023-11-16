@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ApplicantRegistrationModel extends Model
+class ApplicantModel extends Model
 {
     protected $DBGroup          = 'default';
     protected $table            = 'appregister';

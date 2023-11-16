@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import IndexPage from '../views/IndexPage.vue'
+import tmp from '../views/applicant/tmp.vue'
 
 
 const routes = [
   {
     path: '/',
-    component: IndexPage
+    name: 'tmp',
+    component: tmp
   },
 
 ]
