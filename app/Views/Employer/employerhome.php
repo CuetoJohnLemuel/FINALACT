@@ -1,5 +1,5 @@
-<?=$this->include('Employer/inc/header')?>;
-<?= $this->include('Employer/inc/sidebar')?>;
+<?php include 'inc/header.php'?>;
+<?php include 'inc/sidebar.php'?>;
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
@@ -108,4 +108,4 @@
     </section>
     <!-- /.content -->
   </div>
-  <?=$this->include('Employer/inc/footer')?>;
+  <?php include 'inc/footer.php'?>;

@@ -1,33 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PESO-LINK ADMIN</title>
-
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets/admin/plugins/fontawesome-free/css/all.min.css">
-  <!-- DataTables -->
-  <link rel="stylesheet" href="assets/admin/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="assets/admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="assets/admin/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="assets/admin/dist/css/adminlte.min.css">
-</head>
+<?php include 'inc/header.php'?>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
-    
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
 
+    <!-- Right navbar links -->
+    
+  </nav>
 
   </nav>
   <!-- /.navbar -->
-
- <?= $this->include('Admin/inc/sidebar')?>;
+  <?php include 'inc/sidebar.php'?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -48,15 +38,13 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
-           
-
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">DataTable with default features</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
                     <th>Employer ID</th>
@@ -68,20 +56,21 @@
                   </tr>
                   </thead>
                   <tbody>
-                       <?php foreach ($myregemp as $reg): ?>
-                        <tr>
-                        <th><?= $reg['employer_id'] ?></th>
-                    <th><?= $reg['full_name'] ?></th>
-                    <th><?= $reg['position'] ?></th>
-                    <th><?= $reg['company_name'] ?></th>
-                    <th><?= $reg['status'] ?></th>
-                    <th class="text-center"><a href="<?=site_url('empdetails/') . $reg['emp_id']?>"><button class="bg-dark">View Details</button></a></th>
-
-                  </tr>
-            
-                    <?php endforeach; ?>
-                 
-                  </tbody>
+                <?php foreach($empdata as $empdata):?>
+                <tr>
+                    <td><?=$empdata['employer_id'];?></td>
+                    <td><?=$empdata['full_name'];?></td>
+                    <td><?=$empdata['position'];?></td>
+                    <td><?=$empdata['company_name'];?></td>
+                    <td><?=$empdata['status'];?></td>
+                    
+                      <th class="text-center"><a href="employers/<?= $empdata['emp_id']?>"><button class="bg-dark">View Details</button></a></th>
+                    
+                    <!-- <td><a href="<site_url('edit/'.$empdata['emp_id'].'');?>" class="btn btn-primary">Update</a></td>
+                    <td><a href="<site_url('delete/'.$empdata['emp_id'].'');?>" class="btn btn-danger">Delete</a></td> -->
+                </tr>
+                <?php endforeach; ?>         
+            </tbody>
                 </table>
               </div>
             </div>
@@ -104,29 +93,8 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
-
-<!-- jQuery -->
-<script src="assets/admin/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="assets/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- DataTables  & Plugins -->
-<script src="assets/admin/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="assets/admin/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="assets/admin/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="assets/admin/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="assets/admin/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="assets/admin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="assets/admin/plugins/jszip/jszip.min.js"></script>
-<script src="assets/admin/plugins/pdfmake/pdfmake.min.js"></script>
-<script src="assets/admin/plugins/pdfmake/vfs_fonts.js"></script>
-<script src="assets/admin/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="assets/admin/plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="assets/admin/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<!-- AdminLTE App -->
-<script src="assets/admin/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<!-- <script src="assets/admin/dist/js/demo.js"></script> -->
-<!-- Page specific script -->
+<?php include 'inc/footer.php'?>
+ 
 <script>
   $(function () {
     $("#example1").DataTable({

@@ -1,102 +1,96 @@
 <?php
-
-namespace Config;
-
-use CodeIgniter\Config\AutoloadConfig;
-
+defined('PREVENT_DIRECT_ACCESS') OR exit('No direct script access allowed');
 /**
- * -------------------------------------------------------------------
- * AUTOLOADER CONFIGURATION
- * -------------------------------------------------------------------
+ * ------------------------------------------------------------------
+ * LavaLust - an opensource lightweight PHP MVC Framework
+ * ------------------------------------------------------------------
  *
- * This file defines the namespaces and class maps so the Autoloader
- * can find the files as needed.
+ * MIT License
+ * 
+ * Copyright (c) 2020 Ronald M. Marasigan
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
  *
- * NOTE: If you use an identical key in $psr4 or $classmap, then
- *       the values in this file will overwrite the framework's values.
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
  *
- * NOTE: This class is required prior to Autoloader instantiation,
- *       and does not extend BaseConfig.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
  *
- * @immutable
+ * @package LavaLust
+ * @author Ronald M. Marasigan <ronald.marasigan@yahoo.com>
+ * @copyright Copyright 2020 (https://ronmarasigan.github.io)
+ * @since Version 1
+ * @link https://lavalust.pinoywap.org
+ * @license https://opensource.org/licenses/MIT MIT License
  */
-class Autoload extends AutoloadConfig
-{
-    /**
-     * -------------------------------------------------------------------
-     * Namespaces
-     * -------------------------------------------------------------------
-     * This maps the locations of any namespaces in your application to
-     * their location on the file system. These are used by the autoloader
-     * to locate files the first time they have been instantiated.
-     *
-     * The '/app' and '/system' directories are already mapped for you.
-     * you may change the name of the 'App' namespace if you wish,
-     * but this should be done prior to creating any namespaced classes,
-     * else you will need to modify all of those classes for this to work.
-     *
-     * Prototype:
-     *   $psr4 = [
-     *       'CodeIgniter' => SYSTEMPATH,
-     *       'App'         => APPPATH
-     *   ];
-     *
-     * @var array<string, array<int, string>|string>
-     * @phpstan-var array<string, string|list<string>>
-     */
-    public $psr4 = [
-        APP_NAMESPACE => APPPATH, // For custom app namespace
-        'Config'      => APPPATH . 'Config',
-    ];
 
-    /**
-     * -------------------------------------------------------------------
-     * Class Map
-     * -------------------------------------------------------------------
-     * The class map provides a map of class names and their exact
-     * location on the drive. Classes loaded in this manner will have
-     * slightly faster performance because they will not have to be
-     * searched for within one or more directories as they would if they
-     * were being autoloaded through a namespace.
-     *
-     * Prototype:
-     *   $classmap = [
-     *       'MyClass'   => '/path/to/class/file.php'
-     *   ];
-     *
-     * @var array<string, string>
-     */
-    public $classmap = [];
+/*
+| -------------------------------------------------------------------
+| AUTO-LOADER
+| -------------------------------------------------------------------
+| This file specifies which systems should be loaded by default.
+|
+| In order to keep the framework as light-weight as possible only the
+| absolute minimal resources are loaded by default. For example,
+| the database is not connected to automatically since no assumption
+| is made regarding whether you intend to use it.  This file lets
+| you globally define which systems you would like loaded with every
+| request.
+|
+| -------------------------------------------------------------------
+| Instructions
+| -------------------------------------------------------------------
+|
+| These are the things you can load automatically:
+|
+| 1. Helpers
+| 2. Models
+| 3. Libraries
+|
+*/
 
-    /**
-     * -------------------------------------------------------------------
-     * Files
-     * -------------------------------------------------------------------
-     * The files array provides a list of paths to __non-class__ files
-     * that will be autoloaded. This can be useful for bootstrap operations
-     * or for loading functions.
-     *
-     * Prototype:
-     *   $files = [
-     *       '/path/to/my/file.php',
-     *   ];
-     *
-     * @var string[]
-     * @phpstan-var list<string>
-     */
-    public $files = [];
+/*
+| -------------------------------------------------------------------
+|  Auto-load Libraries
+| -------------------------------------------------------------------
+| These are the classes located in scheme/libraries/ or your
+| app/libraries/ directory, with the addition of the
+| 'database' library, which is somewhat of a special case.
+|
+| Prototype:
+|
+|	$autoload['libraries'] = array('database', 'email', 'session');
+*/
+$autoload['libraries'] = array('database');
 
-    /**
-     * -------------------------------------------------------------------
-     * Helpers
-     * -------------------------------------------------------------------
-     * Prototype:
-     *   $helpers = [
-     *       'form',
-     *   ];
-     *
-     * @var string[]
-     * @phpstan-var list<string>
-     */
-    public $helpers = [];
-}
+/*
+| -------------------------------------------------------------------
+|  Auto-load Helper Files
+| -------------------------------------------------------------------
+| Prototype:
+|
+|	$autoload['helper'] = array('url', 'file');
+*/
+$autoload['helpers'] = array('url');
+
+/*
+| -------------------------------------------------------------------
+|  Auto-load Models
+| -------------------------------------------------------------------
+| Prototype:
+|
+|	$autoload['model'] = array('model1_model', 'model2_model')
+*/
+$autoload['models'] = array('postjob_model');
+?>

@@ -1,5 +1,6 @@
- <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
         
 
@@ -25,29 +26,29 @@
           
           <li class="nav-item menu-open">
 
-                <li class="nav-item">
-                        <a href="/adminhome" class="nav-link">
+          <li class="nav-item">
+                        <a href="<?php echo site_url('adminhome');?>" class="nav-link">
                         
                         <p>Dashboard</p>
                         </a>
                 </li>
 
                 <li class="nav-item">
-                        <a href="/employerregistration" class="nav-link">
+                        <a href="<?php echo site_url('employerlist');?>" class="nav-link">
                         
                         <p>Employer Registration</p>
                         </a>
                 </li>
 
                 <li class="nav-item">
-                        <a href="/jobvacancy" class="nav-link">
+                        <a href="<?php echo site_url('jobvacancy');?>" class="nav-link">
                         
                         <p>Job Vacancy</p>
                         </a>
                 </li>
 
                 <li class="nav-item">
-                        <a href="/manageuser" class="nav-link">
+                        <a href="<?php echo site_url('manageuser');?>" class="nav-link">
                         
                         <p>Manage User</p>
                         </a>

@@ -1,8 +1,7 @@
  <!-- Main Sidebar Container -->
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-        
-
+      
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
@@ -26,35 +25,35 @@
           <li class="nav-item menu-open">
 
                 <li class="nav-item">
-                        <a href="/employerhome" class="nav-link">
+                        <a href="<?php echo site_url('employerhome');?>" class="nav-link">
                         
                         <p>Dashboard</p>
                         </a>
                 </li>
 
                 <li class="nav-item">
-                        <a href="/postvacancy" class="nav-link">
+                        <a href="<?php echo site_url('postvacancy');?>" class="nav-link">
                         
                         <p>Post a Job</p>
                         </a>
                 </li>
 
                 <li class="nav-item">
-                        <a href="/jobpost" class="nav-link">
+                        <a href="<?php echo site_url('jobpost');?>" class="nav-link">
                         
                         <p>Job post</p>
                         </a>
                 </li>
 
                 <li class="nav-item">
-                        <a href="/jobapplicants" class="nav-link">
+                        <a href="<?php echo site_url('jobapplicants');?>" class="nav-link">
                         
                         <p>Job applicants</p>
                         </a>
                 </li>
 
                 <li class="nav-item">
-                        <a href="/postvacancy" class="nav-link">
+                        <a href="<?php echo site_url('postvacancy');?>" class="nav-link">
                         
                         <p>Logout</p>
                         </a>

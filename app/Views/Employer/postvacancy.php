@@ -8,9 +8,10 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets/employer/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL . PUBLIC_DIR . ('/assets/employer/dist/css/adminlte.min.css'); ?>">
+  <link rel="stylesheet" href="<?php echo BASE_URL . PUBLIC_DIR . ('/assets/employer/plugins/fontawesome-free/css/all.min.css'); ?>">
   <!-- Theme style -->
-  <link rel="stylesheet" href="assets/employer/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="<?php echo BASE_URL . PUBLIC_DIR . ('/assets/employer/dist/css/adminlte.min.css'); ?>">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -27,7 +28,7 @@
   </nav>
   <!-- /.navbar -->
 
-  <?= $this->include('Employer/inc/sidebar')?>;
+  <?php include 'inc/sidebar.php'?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -56,29 +57,33 @@
               
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="<?= site_url('/addjob') ?>" method="post">
+              <form action="<?php echo site_url('postjob');?>" method="post">
                 <div class="card-body">
+                <!-- <div class="form-group">
+                    <label for="employer_name">Employer Name</label>
+                    <input type="text" name="employer_name" class="form-control" id="employer_name" required placeholder="Enter full name">
+                  </div> -->
                   <div class="form-group">
-                    <label for="exampleInputEmail1">Company Name</label>
-                    <input type="text" name="company_name" class="form-control" id="exampleInputEmail1" required placeholder="Enter company name">
+                    <label for="company_name">Company Name</label>
+                    <input type="text" name="company_name" class="form-control" id="company_name" required placeholder="Enter company name">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Occupation Title</label>
-                    <input type="text" name="occupation_title" class="form-control" id="exampleInputPassword1" required placeholder="Enter occupation title">
+                    <label for="occupation_title">Occupation Title</label>
+                    <input type="text" name="occupation_title" class="form-control" id="occupation_title" required placeholder="Enter occupation title">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Required Number of Employees</label>
-                    <input type="number" name="required_no" class="form-control" id="exampleInputPassword1" required placeholder="Enter required number of employees">
+                    <label for="required_no">Required Number of Employees</label>
+                    <input type="number" name="required_no" class="form-control" id="required_no" required placeholder="Enter required number of employees">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Salary</label>
-                    <input type="number" name="salary" class="form-control" id="exampleInputPassword1" required placeholder="Enter salary">
+                    <label for="salary">Salary</label>
+                    <input type="number" name="salary" class="form-control" id="salary" required placeholder="Enter salary">
                   </div>
 
                   
                        
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Per</label>
+                    <label for="per">Per</label>
                     
                         <select name="per" required class="form-control">
                                 <option value="" disabled selected>Select Category</option>
@@ -90,13 +95,13 @@
                         </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Location</label>
-                    <input type="text" name="location" class="form-control" id="exampleInputPassword1" required placeholder="Enter location">
+                    <label for="location">Location</label>
+                    <input type="text" name="location" class="form-control" id="location" required placeholder="Enter location">
                   </div>
 
 
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Category</label>
+                    <label for="category">Category</label>
                     
                     <select name="category" required class="form-control">
                                 <option value="" disabled selected>Select Category</option>
@@ -111,15 +116,15 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Qualification/Work Experience</label>
-                    <input type="text" name="qualification" class="form-control" id="exampleInputPassword1" required placeholder="Enter qualification/experience">
+                    <label for="qualification">Qualification/Work Experience</label>
+                    <input type="text" name="qualification" class="form-control" id="qualification" required placeholder="Enter qualification/experience">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Job Description</label>
-                    <input type="text" name="job_description" class="form-control" id="exampleInputPassword1" required placeholder="Enter job description">
+                    <label for="job_description">Job Description</label>
+                    <input type="text" name="job_description" class="form-control" id="job_description" required placeholder="Enter job description">
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Prefered Sex</label>
+                    <label for="prefered">Prefered Sex</label>
                     
                     <select name="prefered" required class="form-control">
                             <option value="" disabled selected>Select preferred sex</option>
@@ -173,15 +178,15 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="assets/employer/plugins/jquery/jquery.min.js"></script>
+<script src="<?php echo BASE_URL . PUBLIC_DIR . ('/assets/employer/plugins/jquery/jquery.min.js'); ?>"></script>
 <!-- Bootstrap 4 -->
-<script src="assets/employer/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="<?php echo BASE_URL . PUBLIC_DIR . ('/assets/employer/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 <!-- bs-custom-file-input -->
-<script src="assets/employer/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<script src="<?php echo BASE_URL . PUBLIC_DIR . ('/assets/employer/plugins/bs-custom-file-input/bs-custom-file-input.min.js'); ?>"></script>
 <!-- AdminLTE App -->
-<script src="assets/employer/dist/js/adminlte.min.js"></script>
+<script src="<?php echo BASE_URL . PUBLIC_DIR . ('/assets/employer/dist/js/adminlte.min.js'); ?>"></script>
 <!-- AdminLTE for demo purposes -->
-<!-- <script src="assets/employer/dist/js/demo.js"></script> -->
+<!-- <script src=""></script> -->
 <!-- Page specific script -->
 <script>
 $(function () {
